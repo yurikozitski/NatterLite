@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/x-icon" href="/Images/Logo.png">
+    <link rel="stylesheet" href="/css/Layout.css" >
+    <script src="~/lib/jquery/dist/jquery.min.js" ></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="\Images\Logo.png" />
+            <h1>atter</h1>
+            <h3>LITE</h3>
+        </div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="buttons">
+                <a href="/Search/Search">
+                    <div class="svgwrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="/Chat/ChatMenu">
+                    <div class="svgwrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                            <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="userblock">
+                <h3 id="userName_"></h3>
+                <img id="profilePicture" src="" />
+                <div class="dropdown" id="profileButton">
+                    <div class="threedot"></div>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="/User/SeeProfile" id="link1">My profile</a>
+                        <a href="/User/EditProfile" id="link2">Edit profile</a>
+                        <a href="/Account/Logout" id="link3">Sign out</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="main">
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <p>Copyright © NatterLite</p>
+    </div>
+    <script>
+        var profileButton = document.getElementById("profileButton");
+        var dropdownMenu = document.getElementById("dropdownMenu");
+        profileButton.addEventListener("click", function () {
+            dropdownMenu.style.display = "block";
+        });
+        profileButton.addEventListener("mouseout", function () {
+            dropdownMenu.style.display = "none";
+        });
+        dropdownMenu.addEventListener("mouseover", function () {
+            dropdownMenu.style.display = "block";
+        });
+        dropdownMenu.addEventListener("mouseout", function () {
+            dropdownMenu.style.display = "none";
+        });
+    </script>
+    <script>
+        var profilePicture = document.cookie.replace(/(?:(?:^|.*;\s*)userPicturePath\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        document.getElementById("profilePicture").setAttribute("src", "/SignedUsersPics/" + profilePicture);
+        var userName = document.cookie.replace(/(?:(?:^|.*;\s*)userName\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        userName = userName.replace('%20', ' ');
+        document.getElementById("userName_").appendChild(document.createTextNode(userName));
+    </script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿@model List<ChatViewModel>
+
+<div class="chatsWrapper">
+    @if (Model.Count == 0)
+    {
+        <span>You have no chats yet</span>
+        <span><a href="/Search/Search">Find people to talk with</a></span>
+    }
+    else
+    {
+        foreach (var chat in Model)
+        {
+            <div class="chat" id="@chat.ChatId">
+                <div class="info">
+                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(chat.CompanionUserProfilePicture))" />
+                    <div class="userNames">
+                        <h4>@chat.CompanionUserName</h4>
+                    </div>
+                    <div class="lastMessage">
+                        <span class="lastMessageSpan">
+                            @chat.LastMessageText
+                        </span>
+                    </div>
+                </div>
+                <div class="timeCounterContainer">
+                    @{
+                        if (chat.UnreadMessagesCount == "0")
+                        {
+                            <div class="messageCounterEmpty">
+                                <p></p>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="messageCounter">
+                                <p>@chat.UnreadMessagesCount</p>
+                            </div>
+                        }
+                    }
+                    <div class="lastMessageTime">
+                        @{
+                            if (chat.LastMessageTime == new DateTime())
+                            {
+                                <p></p>
+                            }
+                            else
+                            {
+                                <p>@chat.LastMessageTime.ToString("dd.MM.yy,HH:mm")</p>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

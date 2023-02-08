@@ -1,0 +1,106 @@
+﻿@model NatterLite.Models.LoginViewModel
+@{ ViewBag.Title = "NatterLite-Login"; }
+<style>
+    input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        height: 30px;
+        width: 200px;
+    }
+
+        input.input-validation-error {
+            border: 1px solid red;
+        }
+
+    form {
+        height: inherit;
+        width: 400px;
+        margin-left: 10%;
+    }
+
+    .Login {
+        display: flex;
+        justify-content: center;
+    }
+
+        .Login p:first-child {
+            padding-top: 10px;
+        }
+
+        .Login input {
+            font-size: 1em;
+        }
+
+    .button {
+        margin: 5px 0px 10px 65px;
+        height: 30px;
+    }
+
+        .button input {
+            width: 70px;
+        }
+
+    .validation {
+        height: 50px;
+        font-size: 12px;
+        color: red;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    li {
+        padding-left: 2px;
+    }
+
+    span {
+        font-size: 12px;
+        color: red;
+    }
+
+    .Login a:link {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .Login a:visited {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .Login a:hover {
+        color: blue;
+        text-decoration: underline
+    }
+
+    .Login a:active {
+        color: black;
+        text-decoration: underline;
+    }
+</style>
+<div class="Login">
+    <form asp-antiforgery="true" asp-action="Login" asp-controller="Account">
+
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <p>
+            <label asp-for="Email">Email:</label><br />
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </p>
+        <p>
+            <label asp-for="Password">Password:</label><br />
+            <input asp-for="Password" type="password" />
+            <span asp-validation-for="Password"></span>
+        </p>
+        <p>
+            <div class="button"><input type="submit" value="Log In" /></div>
+        </p>
+        <p>Don't have an account? <a href="/Account/Register">Register</a></p>
+
+    </form>
+</div>
+@await Html.PartialAsync("_ValidationScriptsPartial")

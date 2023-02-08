@@ -1,0 +1,109 @@
+﻿@model UserProfileViewModel
+@{ ViewBag.Title = "NatterLite-Profile"; }
+
+<style>
+    .userProfileView {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+        .userProfileView .userProfileViewWrapper {
+            width: 600px;
+            height: 100%;
+            padding-top: 5px;
+        }
+
+            .userProfileView .userProfileViewWrapper .imagesOfUser {
+                position: relative;
+                width: 100%;
+                height: 275px;
+            }
+
+                .userProfileView .userProfileViewWrapper .imagesOfUser #backgroundImage {
+                    width: 100%;
+                    height: 200px;
+                    border-radius: 5px;
+                    z-index: 1;
+                }
+
+                .userProfileView .userProfileViewWrapper .imagesOfUser #profileImage {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50px;
+                    top: 125px;
+                    z-index: 2;
+                    border: 5px solid white;
+                }
+
+            .userProfileView .userProfileViewWrapper .userNames {
+                width: 100%;
+                height: 60px;
+                float: left;
+                margin-top: 10px;
+            }
+
+                .userProfileView .userProfileViewWrapper .userNames h4 {
+                    font-size: 2em;
+                }
+
+                .userProfileView .userProfileViewWrapper .userNames span {
+                    color: #808080;
+                }
+
+            .userProfileView .userProfileViewWrapper .additionalInfo {
+                width: 100%;
+                height: 80px;
+                float: left;
+                margin-top: 10px;
+            }
+
+                .userProfileView .userProfileViewWrapper .additionalInfo span {
+                    display: block;
+                    height: 20px;
+                    margin-top: 5px;
+                }
+
+            .userProfileView .userProfileViewWrapper .blackListLink {
+                width: 100%;
+                height: 80px;
+                float: left;
+                margin-top: 10px;
+            }
+                .userProfileView .userProfileViewWrapper .blackListLink a {
+                    display:block;
+                    height:20px;
+                    margin-top:5px;
+                }
+</style>
+
+<div class="userProfileView">
+    <div class="userProfileViewWrapper">
+        <div class="imagesOfUser">
+            <img id="backgroundImage" src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.UserBackgroundPicture))" />
+            <img id="profileImage" src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.UserProfilePicture))" />
+        </div>
+        <div class="userNames">
+            <h4>@Model.UserFullName</h4>
+            <span>@Model.UserUniqueName</span>
+        </div>
+        <div class="additionalInfo">
+            <span>@Model.UserStatus</span>
+            <span>Date of Birth:&#160 @Model.UserDateOfBirth</span>
+            <span>Country:&#160 @Model.UserCountry</span>
+        </div>
+        @if (Model.IsThisCurrentUser)
+         {
+            <div class="blackListLink">
+                <a href="/User/SeeBlackList">My Blacklist</a>
+                @if (User.IsInRole("admin")) 
+                 {
+                    <a href="/Admin/BannedUsers">Banned Users</a>
+                 }
+            </div>
+         }
+    </div>
+</div>

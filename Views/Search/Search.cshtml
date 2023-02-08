@@ -1,0 +1,196 @@
+﻿@{ ViewBag.Title = "NatterLite-Search"; }
+<style>
+    input, select {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        height: 30px;
+        width: 200px;
+    }
+
+        input[type=number] {
+            width: 50px;
+        }
+
+        input[type=submit]:hover {
+            background-color: white;
+        }
+
+    #ageFrom {
+        margin-right: 9px;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+    }
+
+    .Search {
+        display: flex;
+        justify-content: center;
+        min-height: 230px;
+        height: 20%;
+    }
+
+        .Search p {
+            padding-top: 10px;
+        }
+
+        .Search input {
+            font-size: 1em;
+        }
+
+    .button {
+        margin: 5px 0px 10px 65px;
+        height: 30px;
+    }
+
+        .button input {
+            width: 70px;
+        }
+
+    .SearchResult {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+    }
+
+    .searchresultWrapper {
+        width: 830px;
+        height: 100%;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding-left: 5px;
+    }
+
+    .person {
+        height: 100px;
+        width: 800px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        margin-top: 5px;
+    }
+
+    .uniqueNameSpan {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .person img {
+        height: 70px;
+        width: 70px;
+        margin-left: 15px;
+        margin-top: 15px;
+        border-radius: 50%;
+        float: left;
+    }
+
+    .person .userNames {
+        width: 300px;
+        height: 40px;
+        float: left;
+        margin-top: 30px;
+        margin-left: 5px;
+    }
+
+    .person .links {
+        height: 100%;
+        width: 400px;
+        float: right;
+    }
+        .person .links .adminLinks {
+            height: 100%;
+            width: 150px;
+            float: right;
+        }
+
+            .person .links .adminLinks .banForm button {
+                width: 150px;
+                height: 30px;
+                margin: 12px 0px 0px 0px;
+                font-size: 1em;
+                color: white;
+                background-color: red;
+                border: 1px solid red;
+                border-radius: 5px;
+            }
+
+                .person .links .adminLinks .banForm button:hover {
+                    color: red;
+                    background-color: white;
+                }
+
+                .person .links .adminLinks .banForm button:disabled {
+                    color: #ccc;
+                    background-color: white;
+                    border: 1px solid #ccc;
+                }
+
+            .person .links .adminLinks .unblockForm button {
+                width: 150px;
+                height: 30px;
+                margin: 12px 0px 0px 0px;
+                font-size: 1em;
+                color: white;
+                background-color: green;
+                border: 1px solid green;
+                border-radius: 5px;
+            }
+
+                .person .links .adminLinks .unblockForm button:hover {
+                    color: green;
+                    background-color: white;
+                }
+
+                .person .links .adminLinks .unblockForm button:disabled {
+                    color: #ccc;
+                    background-color: white;
+                    border: 1px solid #ccc;
+                }
+
+        .person .links .userLinks {
+            height: 100%;
+            width: 250px;
+            float: right;
+            padding-left: 10px;
+        }
+        .person .links input {
+            margin-top: 12px;
+        }
+</style>
+
+<div class="Search">
+    <form id="searchForm">
+        <p>
+            <label for="Name">Name:</label><br />
+            <input type="text" id="Name" name="Name" maxlength="41" minlength="3" pattern="^@@?[A-Za-z0-9'-_]{1,}" />
+        </p>
+        <p>
+            <label>Age:</label><br />
+            <label for="AgeFrom">From:</label>
+            <input type="number" max="100" min="1" id="ageFrom" name="AgeFrom" />
+            <label for="AgeTo">To:</label>
+            <input type="number" max="100" min="1" id="ageTo" name="AgeTo" />
+        </p>
+        <p>
+            <label for="country">Country:</label><br />
+            <select id="country" name="Country">
+                <option value="NoCountry" selected>Select Country</option>
+                @foreach (var country in ViewBag.Countries)
+                {
+                    <option value="@country">@country</option>
+                }
+            </select>
+        </p>
+        <p>
+            <div class="button"><input type="submit" value="Search" id="button1" /></div>
+        </p>
+    </form>
+</div>
+<div class="SearchResult" id="SearchResult">
+    <span>Results will be here</span>
+</div>
+<script src="/js/Search.js"></script>
+

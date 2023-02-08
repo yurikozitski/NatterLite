@@ -1,0 +1,160 @@
+﻿@model List<NatterLite.Models.UserBlackListViewModel>
+@{ ViewBag.Title = "NatterLite-BlackList"; }
+<style>
+    input, select {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        height: 30px;
+        width: 200px;
+    }
+
+        input[type=number] {
+            width: 50px;
+        }
+
+        input[type=submit]:hover {
+            background-color: white;
+        }
+
+    #ageFrom {
+        margin-right: 9px;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+    }
+
+    .Blacklist {
+        display: flex;
+        justify-content: center;
+        min-height: 230px;
+        height: 20%;
+    }
+
+        .Blacklist p {
+            padding-top: 10px;
+        }
+
+        .Blacklist input {
+            font-size: 1em;
+        }
+
+    .button {
+        margin: 5px 0px 10px 65px;
+        height: 30px;
+    }
+
+        .button input {
+            width: 70px;
+        }
+
+    .BlacklistResult {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding-top: 5px;
+    }
+
+    .blacklistresultWrapper {
+        width: 830px;
+        height: 100%;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding-left: 5px;
+    }
+
+    .person {
+        height: 100px;
+        width: 800px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        margin-top: 5px;
+    }
+
+    .uniqueNameSpan {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .person img {
+        height: 70px;
+        width: 70px;
+        margin-left: 15px;
+        margin-top: 15px;
+        border-radius: 50%;
+        float: left;
+    }
+
+    .person .userNames {
+        width: 300px;
+        height: 40px;
+        float: left;
+        margin-top: 30px;
+        margin-left: 5px;
+    }
+
+    .person .links {
+        height: 100%;
+        width: 250px;
+        float: right;
+    }
+
+        .person .links input {
+            margin-left: 25px;
+            margin-top: 12px;
+        }
+</style>
+
+<div class="BlacklistResult" id="BlacklistResult">
+    <div class="blacklistresultWrapper">
+        @if (Model.Count == 0)
+        {
+            <span>Your blacklist is empty!</span>
+        }
+        else
+        {
+            foreach (var user in Model)
+            {
+                <div class="person">
+                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(user.UserProfilePicture))" />
+                    <div class="userNames">
+                        <h4>@user.UserName</h4>
+                        <span class="uniqueNameSpan">@user.UserUniqueName</span>
+                    </div>
+                    <div class="links">
+                        <form class="removeFromBL_forms">
+                            <input type="hidden" name="userName" value="@user.UserUniqueName" />
+                            <input type="submit" value="Remove from BL" />
+                        </form>
+                        <form method="get" action="/User/SeeProfile">
+                            <input type="hidden" id="userUniqueName" name="UserUniqueName" value="@user.UserUniqueName" />
+                            <input type="submit" value="Profile" />
+                        </form>
+                    </div>
+                </div>
+            }
+            <script>
+                function setRemoveFromBLEvents() {
+                    var removeFromBL_forms = document.getElementsByClassName('removeFromBL_forms');
+                    for (let form of removeFromBL_forms) {
+                        form.addEventListener('submit', async function (e) {
+                            e.preventDefault();
+                            let response = await fetch('/User/RemoveFromBlackList', {
+                                method: 'PUT',
+                                body: new FormData(form),
+                            });
+                            let result = await response.text();
+                            document.getElementsByClassName('main')[0].innerHTML = result;
+                            setRemoveFromBLEvents();
+                        });
+                    }
+                }
+                setRemoveFromBLEvents();
+            </script>
+        }
+    </div>
+</div>

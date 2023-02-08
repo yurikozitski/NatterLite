@@ -1,0 +1,221 @@
+﻿@model NatterLite.Models.RegisterViewModel
+@{ ViewBag.Title = "NatterLite-Register"; }
+<style>
+    body {
+        min-height: 850px;
+    }
+
+    input, select {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        height: 30px;
+        width: 200px;
+    }
+
+        input.input-validation-error {
+            border: 1px solid red;
+        }
+
+    .field-validation-error {
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .field-validation-valid {
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    /*#uniqueName-error {
+            height: 30px;
+            width: 120px;
+        }*/
+    .Login {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+
+        .Login p {
+            padding-top: 10px;
+        }
+
+        .Login input {
+            font-size: 1em;
+        }
+
+    .button {
+        margin: 5px 0px 10px 65px;
+        height: 30px;
+    }
+
+        .button input {
+            width: 70px;
+        }
+
+    form {
+        height: inherit;
+        width: 400px;
+        margin-left: 10%;
+    }
+
+    .validation {
+        height: 50px;
+        font-size: 12px;
+        color: red;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    li {
+        padding-left: 2px;
+    }
+
+    span {
+        font-size: 12px;
+        color: red;
+        width: 200px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .input-file {
+        position: relative;
+        display: inline-block;
+    }
+
+        .input-file span {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+            font-size: 14px;
+            vertical-align: middle;
+            color: rgb(255 255 255);
+            text-align: center;
+            border-radius: 4px;
+            background-color: #419152;
+            line-height: 22px;
+            height: 30px;
+            width: 200px;
+            padding: 5px 5px;
+            box-sizing: border-box;
+            border: none;
+            margin: 0;
+            transition: background-color 0.2s;
+        }
+
+        .input-file input[type=file] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+            width: 0;
+            height: 0;
+        }
+
+            /* Focus */
+            .input-file input[type=file]:focus + span {
+                box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+            }
+
+        /* Hover/active */
+        .input-file:hover span {
+            background-color: #59be6e;
+        }
+
+        .input-file:active span {
+            background-color: #2E703A;
+        }
+
+        /* Disabled */
+        .input-file input[type=file]:disabled + span {
+            background-color: #eee;
+        }
+</style>
+
+<div class="Login">
+    <form asp-antiforgery="true" asp-action="Register" asp-controller="Account" enctype="multipart/form-data">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <p>
+            <label asp-for="FirstName">First Name*:</label><br />
+            <input type="text" id="firstName" asp-for="FirstName" />
+            <span asp-validation-for="FirstName"></span>
+        </p>
+        <p>
+            <label asp-for="LastName">Last Name*:</label><br />
+            <input type="text" id="lastName" asp-for="LastName" />
+            <span asp-validation-for="LastName"></span>
+        </p>
+        <p>
+            <label asp-for="UniqueName">Unique Name*:</label><br />
+            <input type="text" id="uniqueName" asp-for="UniqueName" />
+            <span asp-validation-for="UniqueName"></span>
+        </p>
+        <p>
+            <label asp-for="Country">Country:</label><br />
+            <select id="country" asp-for="Country">
+                @foreach (var country in ViewBag.Countries)
+                {
+                    <option value="@country">@country</option>
+                }
+            </select>
+        </p>
+        <p>
+            <label for="dateOfBirth">Date of Birth:</label><br />
+            <input type="date" id="dateOfBirth" asp-for="DateOfBirth"
+                   value="1990-01-01"
+                   min="1920-01-01" max="2020-12-31">
+        </p>
+        <p>
+            <label asp-for="Email">Email*:</label><br />
+            <input type="text" id="email" asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </p>
+        <p>
+            <label asp-for="Password">Password*:</label><br />
+            <input type="password" id="password" asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </p>
+        <p>
+            <label asp-for="ConfirmPassword">Confirm password*:</label><br />
+            <input type="password" id="confirmPassword" asp-for="ConfirmPassword" />
+            <span asp-validation-for="ConfirmPassword"></span>
+        </p>
+        <p>
+            <label asp-for="ProfilePicture">Profile Picture:</label><br />
+            <label class="input-file">
+                <input type="file" asp-for="ProfilePicture" accept=".jpg, .jpeg">
+                <span>Choose file(.jpg or.jpeg)</span>
+            </label>
+            <span asp-validation-for="ProfilePicture"></span>
+        </p>
+        <p>
+            <label asp-for="BackgroundPicture">Background Picture:</label><br />
+            <label class="input-file">
+                <input type="file" asp-for="BackgroundPicture" accept=".jpg, .jpeg">
+                <span>Choose file(.jpg or.jpeg)</span>
+            </label>
+            <span asp-validation-for="BackgroundPicture"></span>
+        </p>
+        <p>
+            <div class="button"><input type="submit" value="Register" /></div>
+        </p>
+    </form>
+</div>
+<script>
+    $('.input-file input[type=file]').on('change', function () {
+        let file = this.files[0];
+        $(this).next().html(file.name);
+    });
+</script>

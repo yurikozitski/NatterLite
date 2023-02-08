@@ -1,0 +1,154 @@
+﻿@model MessagesViewModel
+
+
+<div class="messagesWrapper">
+    <div class="userInfo">
+        <div class="dropdownMes" id="profileButtonMes">
+            <div class="threedot"></div>
+            <div class="dropdownMes-contentMes" id="dropdownMenuMes">
+                <div class="dropdownLinkMes">
+                    <form method="get" action="/User/SeeProfile">
+                        <input type="hidden" id="userUniqueName" name="UserUniqueName" value="@Model.CompanionUserIdentityName" />
+                        <input type="submit" class="dropdownLinkMesSubmit" value="See profile" />
+                    </form>
+                </div>
+                <div class="dropdownLinkMes">
+                    <form id="addToBlackListForm">
+                        <input type="hidden" name="CompanionUniqueName" value="@Model.CompanionUserIdentityName" />
+                        <input type="submit" class="dropdownLinkMesSubmit" value="Add to blacklist" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.CompanionUserProfilePicture))" />
+        <div class="userNames">
+            <div class="namesWrapper">
+                <h3>@Model.CompanionUserName</h3>
+                <span class="status" id="userStatus">@Model.CompanionUserStatus</span>
+            </div>
+        </div>
+    </div>
+    <div class="messageblock" id="messageblock">
+        @if (Model.DidCurrentUserAddedCompanionUserToBlackList)
+        {
+            <input type="hidden" id="cannotSendMessageAnyMore" />
+            <div class="SystemMessageCover">
+                <div class="messageFromSystem">
+                    You added this user to blacklist
+                </div>
+            </div>
+        }
+        @if (Model.DidCompanionUserAddedCurrentUserToBlackList)
+        {
+            <input type="hidden" id="cannotSendMessageAnyMore" />
+            <div class="SystemMessageCover">
+                <div class="messageFromSystem">
+                    This user added you to blacklist
+                </div>
+            </div>
+        }
+        @if (Model.Messages.Count != 0)
+        {
+            foreach (Message mes in Model.Messages)
+            {
+                int messageHeight = 1;
+                int messageWidth;
+                if (mes.Text.Length <= 40)
+                {
+                    messageWidth = mes.Text.Length * 10 + 10;
+                    messageHeight = 25 + 15;
+                }
+                else
+                {
+                    messageWidth = 40 * 10 + 5;
+                }
+                if (mes.Text.Length > 40 && mes.Text.Length <= 80)
+                {
+                    messageHeight = 45;
+                }
+                if (mes.Text.Length > 80 && mes.Text.Length <= 120)
+                {
+                    messageHeight = 65;
+                }
+                if (mes.Text.Length > 120)
+                {
+                    messageHeight = Convert.ToInt32(18 * Math.Ceiling((mes.Text.Length / 40.0)));
+                }
+                string messageHeightStyle = "height:" + messageHeight + "px";
+                string messageHeightWidthStyle = "height:" + messageHeight + "px" + ";" + "width:" + messageWidth + "px";
+
+                if (mes.SenderUserName == User.Identity.Name)
+                {
+                    <div class="MymessageCover" style="@messageHeightStyle">
+                        <div class="triangleWrapperRight">
+                            <div class="triangle-right"></div>
+                        </div>
+                        <div class="messageFromMe" style="@messageHeightWidthStyle">
+                            @mes.Text
+                        </div>
+                        <div class="MymessageTime">@mes.Time.ToString("dd.MM.yy,HH:mm")</div>
+                    </div>
+                }
+                else
+                {
+                    <div class="NotMymessageCover" style="@messageHeightStyle">
+                        <div class="triangleWrapperLeft">
+                            <div class="triangle-left"></div>
+                        </div>
+                        <div class="messageFromNotMe" style="@messageHeightWidthStyle">
+                            @mes.Text
+                        </div>
+                        <div class="NotMymessageTime">@mes.Time.ToString("dd.MM.yy,HH:mm")</div>
+                    </div>
+                }
+            }
+        }
+    </div>
+    <div class="inputblock">
+        <div class="textarea">
+            <textarea name="message" id="message" placeholder="Type your message" maxlength="1000"></textarea>
+        </div>
+        <div class="sendButton" id="sendBtn">
+            <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" fill="#000000"></path> </svg>
+        </div>
+    </div>
+    <script id="displayUserMenuInMessages">
+        //console.log('script inside messages');
+        var profileButtonMes = document.getElementById("profileButtonMes");
+        var dropdownMenuMes = document.getElementById("dropdownMenuMes");
+        profileButtonMes.addEventListener("click", function () {
+            dropdownMenuMes.style.display = "block";
+        });
+        profileButtonMes.addEventListener("mouseout", function () {
+            dropdownMenuMes.style.display = "none";
+        });
+        dropdownMenuMes.addEventListener("mouseover", function () {
+            dropdownMenuMes.style.display = "block";
+        });
+        dropdownMenuMes.addEventListener("mouseout", function () {
+            dropdownMenuMes.style.display = "none";
+        });
+    </script>
+
+    <script id="addToBlackListScript">
+        let addToBlackListForm = document.getElementById('addToBlackListForm');
+        addToBlackListForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            let response = await fetch('/User/AddToBlackList', {
+                method: 'PUT',
+                body: new FormData(addToBlackListForm)
+            });
+            if (response.status == 200) {
+                let formData = new FormData();
+                formData.append('chatId', lastClickedChat.id);
+                let response = await fetch('/Chat/GetMessages', {
+                    method: 'POST',
+                    body: formData,
+                });
+                let result = await response.text();
+                document.getElementById('messages').innerHTML = result;
+                eval(document.getElementById("displayUserMenuInMessages").innerHTML);
+            }
+        });
+    </script>
+</div>

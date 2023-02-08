@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatterLite", "NatterLite.csproj", "{FD0BB401-8791-4A0D-85D1-9FDF62818158}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0BB401-8791-4A0D-85D1-9FDF62818158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0BB401-8791-4A0D-85D1-9FDF62818158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0BB401-8791-4A0D-85D1-9FDF62818158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0BB401-8791-4A0D-85D1-9FDF62818158}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07B42FFC-AE28-4DA8-B271-BABBE1AC7AC0}
+	EndGlobalSection
+EndGlobal

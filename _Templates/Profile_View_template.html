@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NatterLite-Profile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd,
+        ol, ul, li, form, table, caption, tr, th, td, article, aside, footer, header {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            background-color: #f7f7f7;
+            min-height: 600px;
+            min-width: 1000px;
+        }
+
+        html, body, div, ul, li {
+            height: 100%;
+        }
+        .userProfileView{
+            height:100%;
+            width:100%;
+            display:flex;
+            justify-content:center;
+        }
+            .userProfileView .userProfileViewWrapper {
+                width: 600px;
+                height: 100%;
+                padding-top: 5px;
+            }
+                .userProfileView .userProfileViewWrapper .imagesOfUser {
+                    position: relative;
+                    width:100%;
+                    height: 275px;
+                }
+                    .userProfileView .userProfileViewWrapper .imagesOfUser #backgroundImage {
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 5px;
+                        z-index: 1;
+                    }
+                    .userProfileView .userProfileViewWrapper .imagesOfUser #profileImage {
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 50px;
+                        top: 125px;
+                        z-index: 2;
+                        border: 5px solid white;
+                    }
+                .userProfileView .userProfileViewWrapper .userNames {
+                    width: 100%;
+                    height: 60px;
+                    float: left;
+                    margin-top: 10px;
+                }
+                    .userProfileView .userProfileViewWrapper .userNames h4 {
+                        font-size:2em;
+                    }
+                    .userProfileView .userProfileViewWrapper .userNames span {
+                        color:#808080;
+                    }
+                .userProfileView .userProfileViewWrapper .additionalInfo {
+                    width: 100%;
+                    height: 80px;
+                    float: left;
+                    margin-top: 10px;
+                }
+                    .userProfileView .userProfileViewWrapper .additionalInfo span {
+                        display:block;
+                        height:20px;
+                        margin-top:5px;
+                    }
+                .userProfileView .userProfileViewWrapper .blackListLink {
+                    width: 100%;
+                    height: 80px;
+                    float: left;
+                    margin-top: 10px;
+                }
+    </style>
+</head>
+<body>
+    <div class="userProfileView">
+        <div class="userProfileViewWrapper">
+            <div class="imagesOfUser">
+                <img id="backgroundImage" src="C:\MyApps\NatterLite\wwwroot\Images\DefaultUsersPictures\DefaultBackgroundPicture.jpg" />
+                <img id="profileImage" src="C:\MyApps\NatterLite\wwwroot\Images\DefaultUsersPictures\DefaultProfilePicture.jpg" />
+            </div>
+            <div class="userNames">
+                <h4>Tom Smith</h4>
+                <span>@TomSmith</span>
+            </div>
+            <div class="additionalInfo">
+                <span>online</span>
+                <span>Date of Birth:&#160 01.01.1990</span>
+                <span>Country:&#160 Spain</span>
+            </div>
+            <div class="blackListLink">
+                <a href="#">My Blacklist</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

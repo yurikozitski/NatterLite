@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Product Store</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd,
+        ol, ul, li, form, table, caption, tr, th, td, article, aside, footer, header {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            background-color: #f7f7f7;
+            min-height: 1000px;
+            min-width: 1000px;
+        }
+
+        html, body, div, ul, li {
+            height: 100%;
+        }
+
+        input {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            height: 30px;
+            width:200px;
+        }
+
+        .Login {
+            display: flex;
+            justify-content: center;
+        }
+
+            .Login p:first-child {
+                padding-top: 10px;
+            }
+
+            .Login input {
+                font-size: 1em;
+            }
+
+        .button {
+            margin: 5px 0px 10px 65px;
+            height: 30px;
+        }
+            .button input {
+                width: 70px;
+            } 
+        form{
+            height:inherit;
+            width:400px;
+            margin-left:10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="Login">
+        <form method="post" action="~/Account/Login">
+            <p>
+                <label for="email">Email:</label><br />
+                <input type="text" id="email" name="Email" />
+            </p>
+            <p>
+                <label for="password">Password:</label><br />
+                <input type="text" id="password" name="Password" />
+            </p>
+            <p>
+                <div class="button"><input type="submit" value="Log In" /></div>
+            </p>
+            <p>Don't have an account? <a href="/Account/Register">Register</a></p>
+        </form>
+    </div>
+
+
+</body>
+</html>

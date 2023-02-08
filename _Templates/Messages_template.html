@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NatterLite-Messages</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd,
+        ol, ul, li, form, table, caption, tr, th, td, article, aside, footer, header {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            background-color: white;
+            min-width: 1250px;
+        }
+
+        html, body, div, ul, li {
+            height: 100%;
+        }
+        a:link, a:visited, a:hover, a:active {
+            color: black;
+        }
+        span {
+            display: flex;
+            justify-content: center;
+        }
+        .chats {
+            float: left;
+            height: 100%;
+            width: 40%;
+            /*min-width:500px;*/
+            padding:5px;
+        }
+        .chatsWrapper {
+            height: 100%;
+            width: 100%;
+            overflow-y: scroll;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .chat {
+            height: 100px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top:5px;
+        }
+            .chat:hover{
+                background-color:#ccc
+            }
+            .chat .info{
+                height:100%;
+                width:80%;
+                float:left;
+            }
+                .chat .info img {
+                    height: 70px;
+                    width: 70px;
+                    margin-left: 15px;
+                    margin-top: 15px;
+                    border-radius: 50%;
+                    float: left;
+                }
+                .chat .info .userNames {
+                    width: 74%;
+                    height: 40px;
+                    float: left;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    display: flex;
+                    align-items: center;
+                }
+                .chat .info .lastMessage {
+                    width: 74%;
+                    height: 40px;
+                    float: left;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    display: flex;
+                    align-items: flex-start;
+                }
+                    .chat .info .lastMessage .lastMessageSpan {
+                        font-size: 12px;
+                    }
+            .chat .timeCounterContainer{
+                float:right;
+                height:100%;
+                width:70px;
+                padding-right:5px;
+            }
+                .chat .timeCounterContainer .messageCounter {
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 28px;
+                    border-radius: 50%;
+                    float: right;
+                    background-color: red;
+                    color: white;
+                }
+                .chat .timeCounterContainer .lastMessageTime {
+                    height: 15px;
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 15px;
+                    float: right;
+                    color: #8e8e8e;
+                    font-size: 12px;
+                }
+        .messages {
+            float: left;
+            height: 100%;
+            width: 60%;
+            /*min-width: 800px;*/
+            padding:5px;
+        }
+        .messagesWrapper {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+            .userblock {
+                height: 15%;
+                width: 100%;
+                float: left;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                border-bottom: 1px solid #ccc;
+            }
+
+                .userblock img {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                }
+
+                .userblock h3 {
+                    margin-left: 10px;
+                    width:100%;
+                    max-width: 280px;
+                }
+                .userblock .userNames {
+                    width: 300px;
+                    height: 100%;
+                    float: left;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    margin-left: 5px;
+                }
+                    .userblock .userNames .namesWrapper {
+                        width:100%;
+                        height:40px;
+                    }
+                        .userblock .userNames .namesWrapper .status {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: left;
+                            margin-left: 10px;
+                            color: #8e8e8e;
+                        }
+
+            .dropdown {
+                height: 40px;
+                width: 40px;
+                float: left;
+                position: relative;
+                display: block;
+                margin-left: 30px;
+                border-radius: 5px;
+            }
+
+            .threedot {
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .threedot:after {
+                    content: '\2807';
+                    font-size: 30px;
+                    height: 40px;
+                    width: 10px;
+                    padding-right: 3px;
+                }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                border-radius: 5px;
+                top: 40px;
+                height: 100px;
+                background-color: #f1f1f1;
+                width: 200px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+                .dropdown-content .dropdownLinkMes {
+                    color: black;
+                    height: 50px;
+                    width: 200px;
+                    text-decoration: none;
+                    display: block;
+                    border-radius: inherit;
+                }
+                    .dropdown-content .dropdownLinkMes .dropdownLinkMesSubmit {
+                        height: 50px;
+                        width: 200px;
+                        border: 0px;
+                        font-size: 1em;
+                        display: flex;
+                        justify-content: flex-start;
+                        padding-left: 10px;
+                    }
+                        .dropdown-content .dropdownLinkMes .dropdownLinkMesSubmit:hover {
+                            background-color: #ddd;
+                        }
+
+            .dropdown:hover {
+                background-color: #ddd;
+            }
+        .messageblock {
+            width: 100%;
+            height: 65%;
+            float: left;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            overflow-y:scroll;
+        }
+            .messageblock .MymessageCover {
+                width: 100%;
+                margin-bottom: 5px;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: flex-end;
+            }
+                .messageblock .MymessageTime{
+                    height:15px;
+                    width:200px;
+                    font-size:0.7em;
+                    display:flex;
+                    justify-content:flex-end;
+                    align-items:flex-start;
+                    color:#8e8e8e;
+                    margin-right:5px;
+                    /*float:right;*/
+                }
+                .messageblock .MymessageCover .messageFromMe{
+                    /*float:right;*/
+                    background-color:#b1b1b1;
+                    border-radius:5px;
+                    display:flex;
+                    align-items:flex-start;
+                    justify-content:center;
+                    padding-left:5px;
+                    flex-direction: column;
+                }
+                .messageblock .MymessageCover .triangleWrapperRight {
+                    width: 12px;
+                    height: 100%;
+                    /*float: right;*/
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+                }
+                    .messageblock .MymessageCover .triangleWrapperRight .triangle-right {
+                        width: 0;
+                        height: 0;
+                        border-top: 6px solid transparent;
+                        border-left: 12px solid #b1b1b1;
+                        border-bottom: 6px solid transparent;
+                        /*float: right;*/
+                        margin-bottom:5px;
+                    }
+            .messageblock .NotMymessageCover {
+                width: 100%;
+                margin-bottom: 5px;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+            }
+
+            .messageblock .NotMymessageTime {
+                height: 15px;
+                width: 200px;
+                font-size: 0.7em;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                color: #8e8e8e;
+                margin-left: 5px;
+                /*float:right;*/
+            }
+
+            .messageblock .NotMymessageCover .messageFromNotMe {
+                /*float:right;*/
+                background-color: #ccc;
+                border-radius: 5px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                padding-left: 5px;
+                flex-direction: column;
+            }
+
+            .messageblock .NotMymessageCover .triangleWrapperLeft {
+                width: 12px;
+                height: 100%;
+                /*float: right;*/
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-end;
+            }
+
+                .messageblock .NotMymessageCover .triangleWrapperLeft .triangle-left {
+                    width: 0;
+                    height: 0;
+                    border-top: 6px solid transparent;
+                    border-right: 12px solid #ccc;
+                    border-bottom: 6px solid transparent;
+                    /*float: right;*/
+                    margin-bottom: 5px;
+                }
+        .inputblock {
+            width: 100%;
+            height: 20%;
+            float: left;
+            border-top: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+            .inputblock .textarea{
+                height:80%;
+                width:80%;
+                margin-left:10px;
+            }
+                .inputblock .textarea textarea {
+                    height: 100%;
+                    width: 100%;
+                    border: 1px solid #8e8e8e;
+                    border-radius: 5px;
+                    resize: none;
+                    font-family:Verdana;
+                    font-size:16px;
+                }
+                    .inputblock .textarea textarea:focus {
+                        outline: none;
+                        border: 2px solid #8e8e8e;
+                    }
+            .inputblock .sendButton {
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left:10px;
+                border-radius:5px;
+            }
+                .inputblock .sendButton:hover {
+                    background-color:#ddd;
+                }
+    </style>
+</head>
+<body>
+    <div class="chats">
+        <div class="chatsWrapper">
+            <!--<span>You have no chats yet</span>
+            <span><a href="/Search/Search">Find people to talk with</a></span>-->
+            <div class="chat" id="1">
+                <div class="info">
+                    <img src="C:\MyApps\NatterLite\wwwroot\Images\profilepicexample.png" />
+                    <div class="userNames">
+                        <h4>Matthew Jackson</h4>
+                    </div>
+                    <div class="lastMessage">
+                        <span class="lastMessageSpan">
+                            This is example of a message that will be here during communication bettwen people.
+                        </span>
+                    </div>
+                </div>
+                <div class="timeCounterContainer">
+                    <div class="messageCounter">
+                        <p>99+</p>
+                    </div>
+                    <div class="lastMessageTime">
+                        <p>12:35</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="2">
+                <div class="info">
+                    <img src="C:\MyApps\NatterLite\wwwroot\Images\profilepicexample.png" />
+                    <div class="userNames">
+                        <h4>Matthew Jackson</h4>
+                    </div>
+                    <div class="lastMessage">
+                        <span class="lastMessageSpan">
+                            This is example of a message that will be here during communication bettwen people.
+                        </span>
+                    </div>
+                </div>
+                <div class="timeCounterContainer">
+                    <div class="messageCounter">
+                        <p>99+</p>
+                    </div>
+                    <div class="lastMessageTime">
+                        <p>12:35</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="3">
+                <div class="info">
+                    <img src="C:\MyApps\NatterLite\wwwroot\Images\profilepicexample.png" />
+                    <div class="userNames">
+                        <h4>Matthew Jackson</h4>
+                    </div>
+                    <div class="lastMessage">
+                        <span class="lastMessageSpan">
+                            This is example of a message that will be here during communication bettwen people.
+                        </span>
+                    </div>
+                </div>
+                <div class="timeCounterContainer">
+                    <div class="messageCounter">
+                        <p>99+</p>
+                    </div>
+                    <div class="lastMessageTime">
+                        <p>12:35</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messages">
+        <div class="messagesWrapper">
+            <div class="userblock">
+                <div class="dropdown" id="profileButton">
+                    <div class="threedot"></div>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <div class="dropdownLinkMes">
+                            <form>
+                                <input type="submit" class="dropdownLinkMesSubmit" value="See profile" />
+                            </form>
+                        </div>
+                        <div class="dropdownLinkMes">
+                            <form>
+                                <input type="submit" class="dropdownLinkMesSubmit" value="Add to blacklist" />
+                            </form>
+                        </div>
+                        <!--<a href="#" id="link1">See profile</a>
+                        <a href="#" id="link2">Add to blacklist</a>-->
+                    </div>
+                </div>
+                <img src="C:\MyApps\NatterLite\wwwroot\Images\profilepicexample.png" />
+                <div class="userNames">
+                    <div class="namesWrapper">
+                        <h3>Matthew Jackson</h3>
+                        <span class="status">online</span>
+                    </div>
+                </div>
+            </div>
+            <div class="messageblock" id="messageblock">
+                <!--<div class="MymessageCover">
+                    <div class="messageFromMe">
+                        <span>
+                            Hello word!
+                        </span>
+                    </div>
+                </div>-->
+            </div>
+            <div class="inputblock">
+                <div class="textarea">
+                    <textarea name="message" id="message" placeholder="Type your message" maxlength="1000"></textarea>
+                </div>
+                <div class="sendButton">
+                    <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" fill="#000000"></path> </svg>
+                </div>
+            </div>
+            <script>
+                let fromWhom = "NotfromCurrentUser";
+                let messageText = "&#x44F;";
+                let now = new Date().toLocaleString('ru-RU', {
+                    day: "numeric",
+                    month: "numeric",
+                    year: "2-digit",
+                    hour: "numeric",
+                    minute: "numeric"
+                });
+
+                let messageCover = document.createElement("div");
+                let mes = document.createElement("div");
+                let triangleWrapper = document.createElement("div");
+                let triangle = document.createElement("div");
+                let messageTime = document.createElement("div");
+
+                if (fromWhom == 'fromCurrentUser') {
+                    messageCover.setAttribute('class', 'MymessageCover');
+                    mes.setAttribute('class', 'messageFromMe');
+                    triangleWrapper.setAttribute('class', 'triangleWrapperRight');
+                    triangle.setAttribute('class', 'triangle-right');
+                    messageTime.setAttribute('class', 'MymessageTime');
+                }
+                else {
+                    messageCover.setAttribute('class', 'NotMymessageCover');
+                    mes.setAttribute('class', 'messageFromNotMe');
+                    triangleWrapper.setAttribute('class', 'triangleWrapperLeft');
+                    triangle.setAttribute('class', 'triangle-left');
+                    messageTime.setAttribute('class', 'NotMymessageTime');
+                }
+
+                let messageHeight;
+                let messageWidth;
+                if (messageText.length <= 40) {
+                    messageWidth = messageText.length * 10 + 5;
+                    messageHeight = 25 + 15;
+                }
+                else {
+                    messageWidth = 40 * 10 + 5;
+                }
+                if (messageText.length > 40 && messageText.length <= 80) {
+                    messageHeight = 45;
+                }
+                if (messageText.length > 80 && messageText.length <= 120) {
+                    messageHeight = 65;
+                }
+                if (messageText.length > 120) {
+                    messageHeight = 17 * Math.ceil(messageText.length / 40);
+                }
+
+                mes.setAttribute('style', `height:${messageHeight}px;width:${messageWidth}px`);
+                messageCover.setAttribute('style', `height:${messageHeight}px;`);
+
+                messageTime.appendChild(document.createTextNode(now));
+                mes.appendChild(document.createTextNode(messageText));
+                triangleWrapper.appendChild(triangle);
+                messageCover.appendChild(triangleWrapper);
+                messageCover.appendChild(mes);
+                messageCover.appendChild(messageTime);
+
+                let firstElem = document.getElementById("messageblock").firstChild;
+                document.getElementById("messageblock").insertBefore(messageCover, firstElem);
+            </script>
+
+            <script>
+                var profileButton = document.getElementById("profileButton");
+                var dropdownMenu = document.getElementById("dropdownMenu");
+                profileButton.addEventListener("click", function () {
+                    dropdownMenu.style.display = "block";
+                });
+                //profileButton.addEventListener("mouseout", function () {
+                //    dropdownMenu.style.display = "none";
+                //});
+                dropdownMenu.addEventListener("mouseover", function () {
+                    dropdownMenu.style.display = "block";
+                });
+                //dropdownMenu.addEventListener("mouseout", function () {
+                //    dropdownMenu.style.display = "none";
+                //});
+            </script>
+        </div>
+    </div>
+    <script>
+        var chats = document.getElementsByClassName('chat');
+        var lastClickedChat;
+        for (let chat of chats) {
+            chat.addEventListener('click', function () {
+                chat.setAttribute('style', 'background-color:#b1b1b1');
+                if (lastClickedChat != undefined) {
+                    lastClickedChat.setAttribute('style', '');
+                }
+                lastClickedChat = chat;
+            });
+        }
+    </script>
+    <script>
+        console.log(a);
+    </script>
+    <script>
+        var a = 5;
+    </script>
+</body>
+</html>

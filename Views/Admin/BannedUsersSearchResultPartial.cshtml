@@ -1,0 +1,47 @@
+﻿@model List<NatterLite.Models.UserSearchViewModel>
+
+<div class="searchresultWrapper">
+    @if (Model.Count == 0)
+    {
+        <span>No results found</span>
+    }
+    else
+    {
+        foreach (var user in Model)
+        {
+            <div class="person">
+                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(user.UserProfilePicture))" />
+                <div class="userNames">
+                    <h4>@user.UserName</h4>
+                    <span class="uniqueNameSpan">@user.UserUniqueName</span>
+                </div>
+                <div class="links">
+                    <div class="userLinks">
+                        <form method="post" action="/Chat/SendMessage">
+                            <input type="hidden" name="userId" value="@user.UserId" />
+                            <input type="submit" value="Message" />
+                        </form>
+                        <form method="get" action="/User/SeeProfile">
+                            <input type="hidden" id="userUniqueName" name="UserUniqueName" value="@user.UserUniqueName" />
+                            <input type="submit" value="Profile" />
+                        </form>
+                    </div>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <div class="adminLinks">
+                            <form class="banForm" name="@user.IsBanned.ToString()">
+                                <input type="hidden" name="userName" value="@user.UserUniqueName" />
+                                <button type="submit" class="banButton">Ban</button>
+                            </form>
+                            <form class="unblockForm" name="@user.IsBanned.ToString()">
+                                <input type="hidden" name="userName" value="@user.UserUniqueName" />
+                                <button type="submit" class="unblockButton">Unblock</button>
+                            </form>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
+</div>
+
