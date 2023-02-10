@@ -20,6 +20,8 @@ Server-side caching added to improve performance. Server and client-side validat
 - CSS
 - Asp.Net Core 5
 - MVC
+- Entity Framework Core
+- SQL Server Express
 - Asp.Net Identity
 - Filters
 - SignalR
