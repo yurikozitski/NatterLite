@@ -238,6 +238,8 @@ namespace NatterLite.Controllers
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
+            if (!User.Identity.IsAuthenticated) return RedirectToAction("Login", "Account");
+
             await signInManager.SignOutAsync();
 
             if (cache.TryGetValue(User.Identity.Name, out User user)) cache.Remove(User.Identity.Name);
