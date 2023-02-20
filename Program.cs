@@ -19,10 +19,10 @@ namespace NatterLite
         public static async Task Main(string[] args)
         {
             var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
-            var host = CreateHostBuilder(args).Build();
-
+           
             try
-            {               
+            {
+                var host = CreateHostBuilder(args).Build();
                 using (var scope = host.Services.CreateScope())
                 {
                     var services = scope.ServiceProvider;
@@ -38,6 +38,7 @@ namespace NatterLite
             catch (Exception ex)
             {
                 logger.Error(ex, "An error occurred while seeding the database.");
+                throw;
             }
             finally
             {
