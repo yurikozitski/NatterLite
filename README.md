@@ -4,6 +4,7 @@ send messages, edit his profile data, see other's users profiles, add unwanted u
 App has two roles for users: "user" and "admin". Admin has some additional abilities such as banning of users.
 Microsoft SignalR used to implement real-time communication, Asp.Net Core Identity as authentication technology.
 Server-side caching added to improve performance. Server and client-side validation also included.
+NLog used for logging.
 
 #### Profile view:
 ![profile](Screenshots/profile.png)
@@ -26,6 +27,7 @@ Server-side caching added to improve performance. Server and client-side validat
 - Filters
 - SignalR
 - MemoryCache
+- NLog
 - AJAX
 - Cookies
 - Authorization/Authentication
