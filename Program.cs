@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NLog.Web;
 
 namespace NatterLite
 {
@@ -17,26 +18,32 @@ namespace NatterLite
     {
         public static async Task Main(string[] args)
         {
+            var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
             var host = CreateHostBuilder(args).Build();
 
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
+            try
+            {               
+                using (var scope = host.Services.CreateScope())
                 {
+                    var services = scope.ServiceProvider;
                     var userManager = services.GetRequiredService<UserManager<User>>();
                     var rolesManager = services.GetRequiredService<RoleManager<IdentityRole>>();
                     var picturesProvider = services.GetRequiredService<IPicturesProvider>();
                     await RoleInitializer.InitializeAsync(userManager, rolesManager, picturesProvider);
+                    
                 }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred while seeding the database.");
-                }
-            }
 
-            host.Run();
+                host.Run();
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "An error occurred while seeding the database.");
+            }
+            finally
+            {
+                NLog.LogManager.Shutdown();
+            }
+            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -44,6 +51,12 @@ namespace NatterLite
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                    logging.SetMinimumLevel(LogLevel.Error);
+                })
+                .UseNLog();
     }
 }

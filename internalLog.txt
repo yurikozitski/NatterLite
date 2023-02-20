@@ -1,0 +1,618 @@
+2023-02-20 16:14:13.4808 Info Message Template Auto Format enabled
+2023-02-20 16:14:13.5678 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:14:13.7228 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:14:13.7498 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'otherFile-web' not found for logging rule: *.
+2023-02-20 16:14:13.7958 Info Validating config: TargetNames=errors, ConfigItems=18, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:14:13.8738 Info Configuration initialized.
+2023-02-20 16:14:13.9588 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:14:13.9588 Info Validating config: TargetNames=errors, ConfigItems=18, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:14:14.0408 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:14:14.0408 Info Message Template Auto Format enabled
+2023-02-20 16:14:14.0468 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:14:14.0468 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:14:14.0468 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'otherFile-web' not found for logging rule: *.
+2023-02-20 16:14:14.0468 Info Closing old configuration.
+2023-02-20 16:14:14.0948 Info Validating config: TargetNames=errors, ConfigItems=18, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:14:41.6624 Info Shutdown() called. Logger closing...
+2023-02-20 16:14:41.6624 Info Closing old configuration.
+2023-02-20 16:14:41.6774 Info Logger has been closed down.
+2023-02-20 16:28:34.9050 Info Message Template Auto Format enabled
+2023-02-20 16:28:35.0580 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:28:35.3190 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:28:35.3650 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'otherFile-web' not found for logging rule: *.
+2023-02-20 16:28:35.4170 Info Validating config: TargetNames=errors, ConfigItems=18, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:28:35.4601 Info Configuration initialized.
+2023-02-20 16:28:35.4871 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:28:35.4871 Info Validating config: TargetNames=errors, ConfigItems=18, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:28:35.5711 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:28:35.5791 Info Message Template Auto Format enabled
+2023-02-20 16:28:35.5791 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:28:35.5941 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:28:35.5941 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'otherFile-web' not found for logging rule: *.
+2023-02-20 16:28:35.5941 Info Closing old configuration.
+2023-02-20 16:28:35.6791 Info Validating config: TargetNames=errors, ConfigItems=18, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:28:43.6375 Info Shutdown() called. Logger closing...
+2023-02-20 16:28:43.6525 Info Closing old configuration.
+2023-02-20 16:28:43.6665 Info Logger has been closed down.
+2023-02-20 16:32:49.7074 Info Message Template Auto Format enabled
+2023-02-20 16:32:49.7534 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:32:49.9074 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:32:49.9844 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:32:50.0324 Info Configuration initialized.
+2023-02-20 16:32:50.0754 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:32:50.0864 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:32:50.1594 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:32:50.1594 Info Message Template Auto Format enabled
+2023-02-20 16:32:50.1594 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:32:50.1854 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:32:50.1854 Info Closing old configuration.
+2023-02-20 16:32:50.2974 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:32:56.8008 Info Shutdown() called. Logger closing...
+2023-02-20 16:32:56.8008 Info Closing old configuration.
+2023-02-20 16:32:56.8008 Info Logger has been closed down.
+2023-02-20 16:37:21.6891 Info Message Template Auto Format enabled
+2023-02-20 16:37:21.7321 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:37:21.8731 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:37:21.9491 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:37:21.9871 Info Configuration initialized.
+2023-02-20 16:37:22.0091 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:37:22.0091 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:37:22.0761 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:37:22.0761 Info Message Template Auto Format enabled
+2023-02-20 16:37:22.0761 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:37:22.0811 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:37:22.0811 Info Closing old configuration.
+2023-02-20 16:37:22.1481 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:37:28.2614 Info Shutdown() called. Logger closing...
+2023-02-20 16:37:28.2614 Info Closing old configuration.
+2023-02-20 16:37:28.2614 Info Logger has been closed down.
+2023-02-20 16:41:40.7519 Info Message Template Auto Format enabled
+2023-02-20 16:41:40.7979 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:41:40.9429 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:41:41.0189 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:41:41.0649 Info Configuration initialized.
+2023-02-20 16:41:41.0829 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:41:41.0829 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:41:41.1560 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:41:41.1560 Info Message Template Auto Format enabled
+2023-02-20 16:41:41.1560 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:41:41.1670 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:41:41.1670 Info Closing old configuration.
+2023-02-20 16:41:41.2170 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:41:47.7433 Info Shutdown() called. Logger closing...
+2023-02-20 16:41:47.7433 Info Closing old configuration.
+2023-02-20 16:41:47.7433 Info Logger has been closed down.
+2023-02-20 16:46:31.5670 Info Message Template Auto Format enabled
+2023-02-20 16:46:31.6600 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:46:31.8370 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:46:31.9270 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:46:31.9660 Info Configuration initialized.
+2023-02-20 16:46:31.9840 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:46:31.9840 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:46:32.0670 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:46:32.0670 Info Message Template Auto Format enabled
+2023-02-20 16:46:32.0670 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:46:32.0670 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:46:32.0780 Info Closing old configuration.
+2023-02-20 16:46:32.1500 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:46:39.0994 Info Shutdown() called. Logger closing...
+2023-02-20 16:46:39.0994 Info Closing old configuration.
+2023-02-20 16:46:39.1154 Info Logger has been closed down.
+2023-02-20 16:51:06.6305 Info Message Template Auto Format enabled
+2023-02-20 16:51:06.6855 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:51:06.8295 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:51:06.8925 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:51:06.9365 Info Configuration initialized.
+2023-02-20 16:51:07.0375 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:51:07.0375 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:51:07.1215 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:51:07.1235 Info Message Template Auto Format enabled
+2023-02-20 16:51:07.1235 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:51:07.1475 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:51:07.1475 Info Closing old configuration.
+2023-02-20 16:51:07.2265 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:51:13.3598 Info Shutdown() called. Logger closing...
+2023-02-20 16:51:13.3598 Info Closing old configuration.
+2023-02-20 16:51:13.3648 Info Logger has been closed down.
+2023-02-20 16:56:51.1965 Info Message Template Auto Format enabled
+2023-02-20 16:56:51.2415 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:56:51.3925 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:56:51.4485 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:56:51.4855 Info Configuration initialized.
+2023-02-20 16:56:51.5045 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 16:56:51.5045 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 16:56:51.6715 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:56:51.6715 Info Message Template Auto Format enabled
+2023-02-20 16:56:51.6715 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 16:56:51.6825 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 16:56:51.6825 Info Closing old configuration.
+2023-02-20 16:56:51.7365 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 16:56:57.9028 Info Shutdown() called. Logger closing...
+2023-02-20 16:56:57.9028 Info Closing old configuration.
+2023-02-20 16:56:57.9058 Info Logger has been closed down.
+2023-02-20 17:03:39.1489 Info Message Template Auto Format enabled
+2023-02-20 17:03:39.2409 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:03:39.3949 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:03:39.4860 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:03:39.5290 Info Configuration initialized.
+2023-02-20 17:03:39.5490 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:03:39.5490 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:03:39.6580 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:03:39.6580 Info Message Template Auto Format enabled
+2023-02-20 17:03:39.6580 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:03:39.6580 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:03:39.6580 Info Closing old configuration.
+2023-02-20 17:03:39.7140 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:03:53.5868 Info Shutdown() called. Logger closing...
+2023-02-20 17:03:53.5868 Info Closing old configuration.
+2023-02-20 17:03:53.5868 Info Logger has been closed down.
+2023-02-20 17:05:32.6738 Info Message Template Auto Format enabled
+2023-02-20 17:05:32.7198 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:05:32.9169 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:05:32.9919 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:05:33.0389 Info Configuration initialized.
+2023-02-20 17:05:33.0659 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:05:33.0679 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:05:33.1429 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:05:33.1429 Info Message Template Auto Format enabled
+2023-02-20 17:05:33.1429 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:05:33.1489 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:05:33.1489 Info Closing old configuration.
+2023-02-20 17:05:33.2019 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:05:40.0143 Info Shutdown() called. Logger closing...
+2023-02-20 17:05:40.0143 Info Closing old configuration.
+2023-02-20 17:05:40.0143 Info Logger has been closed down.
+2023-02-20 17:08:57.7489 Info Message Template Auto Format enabled
+2023-02-20 17:08:57.7969 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:08:57.9869 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:08:58.0949 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:08:58.1499 Info Configuration initialized.
+2023-02-20 17:08:58.2039 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:08:58.2039 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:08:58.3049 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:08:58.3049 Info Message Template Auto Format enabled
+2023-02-20 17:08:58.3049 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:08:58.3049 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:08:58.3049 Info Closing old configuration.
+2023-02-20 17:08:58.3579 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:09:04.5603 Info Shutdown() called. Logger closing...
+2023-02-20 17:09:04.5603 Info Closing old configuration.
+2023-02-20 17:09:04.5843 Info Logger has been closed down.
+2023-02-20 17:11:31.2378 Info Message Template Auto Format enabled
+2023-02-20 17:11:31.2888 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:11:31.4468 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:11:31.5768 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:11:31.6168 Info Configuration initialized.
+2023-02-20 17:11:31.6438 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:11:31.6438 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:11:31.7278 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:11:31.7278 Info Message Template Auto Format enabled
+2023-02-20 17:11:31.7308 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:11:31.7308 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:11:31.7628 Info Closing old configuration.
+2023-02-20 17:11:31.8118 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:11:38.9012 Info Shutdown() called. Logger closing...
+2023-02-20 17:11:38.9012 Info Closing old configuration.
+2023-02-20 17:11:38.9162 Info Logger has been closed down.
+2023-02-20 17:27:28.2687 Info Message Template Auto Format enabled
+2023-02-20 17:27:28.3357 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:27:28.4767 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:27:28.5417 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:27:28.5837 Info Configuration initialized.
+2023-02-20 17:27:28.6047 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:27:28.6047 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:27:28.6787 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:27:28.6787 Info Message Template Auto Format enabled
+2023-02-20 17:27:28.6787 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:27:28.6787 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:27:28.6867 Info Closing old configuration.
+2023-02-20 17:27:28.7397 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:27:40.3714 Info Shutdown() called. Logger closing...
+2023-02-20 17:27:40.3714 Info Closing old configuration.
+2023-02-20 17:27:40.3884 Info Logger has been closed down.
+2023-02-20 17:35:58.8777 Info Message Template Auto Format enabled
+2023-02-20 17:35:58.9287 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:35:59.0628 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:35:59.1258 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:35:59.1668 Info Configuration initialized.
+2023-02-20 17:35:59.1868 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:35:59.1868 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:35:59.2608 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:35:59.2608 Info Message Template Auto Format enabled
+2023-02-20 17:35:59.2638 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:35:59.2638 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:35:59.2638 Info Closing old configuration.
+2023-02-20 17:35:59.3168 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:36:09.6704 Info Shutdown() called. Logger closing...
+2023-02-20 17:36:09.6704 Info Closing old configuration.
+2023-02-20 17:36:09.6864 Info Logger has been closed down.
+2023-02-20 17:41:41.0322 Info Message Template Auto Format enabled
+2023-02-20 17:41:41.0882 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:41:41.2272 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:41:41.2862 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:41:41.3252 Info Configuration initialized.
+2023-02-20 17:41:41.3442 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:41:41.3442 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:41:41.4152 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:41:41.4152 Info Message Template Auto Format enabled
+2023-02-20 17:41:41.4152 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:41:41.4212 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:41:41.4212 Info Closing old configuration.
+2023-02-20 17:41:41.4972 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:41:48.3166 Info Shutdown() called. Logger closing...
+2023-02-20 17:41:48.3166 Info Closing old configuration.
+2023-02-20 17:41:48.3326 Info Logger has been closed down.
+2023-02-20 17:47:05.5501 Info Message Template Auto Format enabled
+2023-02-20 17:47:05.6051 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:47:05.7841 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:47:05.8431 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:47:05.8871 Info Configuration initialized.
+2023-02-20 17:47:05.9651 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:47:05.9801 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:47:06.0651 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:47:06.0651 Info Message Template Auto Format enabled
+2023-02-20 17:47:06.0651 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:47:06.0741 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:47:06.0741 Info Closing old configuration.
+2023-02-20 17:47:06.1221 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:47:12.9725 Info Shutdown() called. Logger closing...
+2023-02-20 17:47:12.9725 Info Closing old configuration.
+2023-02-20 17:47:12.9905 Info Logger has been closed down.
+2023-02-20 17:52:33.2575 Info Message Template Auto Format enabled
+2023-02-20 17:52:33.2905 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:52:33.4445 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:52:33.5065 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:52:33.5495 Info Configuration initialized.
+2023-02-20 17:52:33.6416 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 17:52:33.6416 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 17:52:33.7986 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:52:33.7986 Info Message Template Auto Format enabled
+2023-02-20 17:52:33.8016 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 17:52:33.8016 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 17:52:33.8016 Info Closing old configuration.
+2023-02-20 17:52:33.8946 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 17:52:41.1350 Info Shutdown() called. Logger closing...
+2023-02-20 17:52:41.1350 Info Closing old configuration.
+2023-02-20 17:52:41.1520 Info Logger has been closed down.
+2023-02-20 18:02:24.6955 Info Message Template Auto Format enabled
+2023-02-20 18:02:24.9305 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:02:25.0985 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:02:25.1895 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 18:02:25.2395 Info Configuration initialized.
+2023-02-20 18:02:25.2635 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 18:02:25.3175 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:02:25.3175 Info Message Template Auto Format enabled
+2023-02-20 18:02:25.3175 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:02:25.3255 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:02:25.3255 Info Closing old configuration.
+2023-02-20 18:02:25.3696 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:02:35.8642 Info Shutdown() called. Logger closing...
+2023-02-20 18:02:35.8642 Info Closing old configuration.
+2023-02-20 18:02:35.8792 Info Logger has been closed down.
+2023-02-20 18:06:47.4633 Info Message Template Auto Format enabled
+2023-02-20 18:06:47.5103 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:06:47.6453 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:06:47.7093 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 18:06:47.7473 Info Configuration initialized.
+2023-02-20 18:06:47.7653 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 18:06:47.7963 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:06:47.7963 Info Message Template Auto Format enabled
+2023-02-20 18:06:47.7963 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:06:47.7963 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:06:47.7963 Info Closing old configuration.
+2023-02-20 18:06:48.0383 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:06:54.5897 Info Shutdown() called. Logger closing...
+2023-02-20 18:06:54.5897 Info Closing old configuration.
+2023-02-20 18:06:54.6037 Info Logger has been closed down.
+2023-02-20 18:37:09.0414 Info Message Template Auto Format enabled
+2023-02-20 18:37:09.1234 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:37:09.3004 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:37:09.3604 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 18:37:09.3994 Info Configuration initialized.
+2023-02-20 18:37:09.4194 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 18:37:09.4594 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:37:09.4674 Info Message Template Auto Format enabled
+2023-02-20 18:37:09.4674 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:37:09.4674 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:37:09.4674 Info Closing old configuration.
+2023-02-20 18:37:09.5134 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:37:27.9585 Info Shutdown() called. Logger closing...
+2023-02-20 18:37:27.9585 Info Closing old configuration.
+2023-02-20 18:37:27.9735 Info Logger has been closed down.
+2023-02-20 18:49:08.1798 Info Message Template Auto Format enabled
+2023-02-20 18:49:08.2408 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:49:08.3778 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:49:08.4448 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 18:49:08.5018 Info Configuration initialized.
+2023-02-20 18:49:08.5708 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 18:49:08.5708 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 18:49:08.7398 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:49:08.7418 Info Message Template Auto Format enabled
+2023-02-20 18:49:08.7418 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:49:08.7418 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:49:08.7418 Info Closing old configuration.
+2023-02-20 18:49:08.9199 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:49:15.8212 Info Shutdown() called. Logger closing...
+2023-02-20 18:49:15.8212 Info Closing old configuration.
+2023-02-20 18:49:15.8242 Info Logger has been closed down.
+2023-02-20 18:51:59.1563 Info Message Template Auto Format enabled
+2023-02-20 18:51:59.2403 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:51:59.3744 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:51:59.5774 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 18:51:59.6284 Info Configuration initialized.
+2023-02-20 18:51:59.6654 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 18:51:59.6654 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 18:51:59.7564 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:51:59.7564 Info Message Template Auto Format enabled
+2023-02-20 18:51:59.7564 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 18:51:59.7564 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 18:51:59.7644 Info Closing old configuration.
+2023-02-20 18:51:59.8204 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 18:52:06.7768 Info Shutdown() called. Logger closing...
+2023-02-20 18:52:06.7768 Info Closing old configuration.
+2023-02-20 18:52:06.7918 Info Logger has been closed down.
+2023-02-20 19:03:09.9360 Info Message Template Auto Format enabled
+2023-02-20 19:03:09.9980 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:03:10.1380 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:03:10.2210 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:03:10.2590 Info Configuration initialized.
+2023-02-20 19:03:10.2860 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:03:10.2860 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:03:10.3570 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:03:10.3740 Info Message Template Auto Format enabled
+2023-02-20 19:03:10.3740 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:03:10.3740 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:03:10.3740 Info Closing old configuration.
+2023-02-20 19:03:10.4330 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:03:20.7406 Info Shutdown() called. Logger closing...
+2023-02-20 19:03:20.7406 Info Closing old configuration.
+2023-02-20 19:03:20.7406 Info Logger has been closed down.
+2023-02-20 19:06:45.4331 Info Message Template Auto Format enabled
+2023-02-20 19:06:45.4901 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:06:45.6501 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:06:45.7071 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:06:45.7531 Info Configuration initialized.
+2023-02-20 19:06:45.8281 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:06:45.8281 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:06:45.9331 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:06:45.9331 Info Message Template Auto Format enabled
+2023-02-20 19:06:45.9331 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:06:45.9331 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:06:45.9331 Info Closing old configuration.
+2023-02-20 19:06:46.0101 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:06:52.5145 Info Shutdown() called. Logger closing...
+2023-02-20 19:06:52.5145 Info Closing old configuration.
+2023-02-20 19:06:52.5145 Info Logger has been closed down.
+2023-02-20 19:19:34.6339 Info Message Template Auto Format enabled
+2023-02-20 19:19:34.6829 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:19:34.8770 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:19:34.9850 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:19:35.0330 Info Configuration initialized.
+2023-02-20 19:19:35.0800 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:19:35.1190 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:19:35.1960 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:19:35.1960 Info Message Template Auto Format enabled
+2023-02-20 19:19:35.1960 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:19:35.2020 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:19:35.2020 Info Closing old configuration.
+2023-02-20 19:19:35.2530 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:19:45.6316 Info Shutdown() called. Logger closing...
+2023-02-20 19:19:45.6316 Info Closing old configuration.
+2023-02-20 19:19:45.6316 Info Logger has been closed down.
+2023-02-20 19:26:03.6065 Info Message Template Auto Format enabled
+2023-02-20 19:26:03.6585 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:26:03.8195 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:26:03.9285 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:26:04.0115 Info Configuration initialized.
+2023-02-20 19:26:04.1325 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:26:04.1465 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:26:04.2275 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:26:04.2275 Info Message Template Auto Format enabled
+2023-02-20 19:26:04.2275 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:26:04.2275 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:26:04.2275 Info Closing old configuration.
+2023-02-20 19:26:04.2945 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:26:10.5889 Info Shutdown() called. Logger closing...
+2023-02-20 19:26:10.5889 Info Closing old configuration.
+2023-02-20 19:26:10.6139 Info Logger has been closed down.
+2023-02-20 19:32:53.3810 Info Message Template Auto Format enabled
+2023-02-20 19:32:53.4640 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:32:53.6060 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:32:53.6770 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:32:53.7170 Info Configuration initialized.
+2023-02-20 19:32:53.7420 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:32:53.7420 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:32:53.8980 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:32:53.8980 Info Message Template Auto Format enabled
+2023-02-20 19:32:53.8980 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:32:53.8980 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:32:53.9100 Info Closing old configuration.
+2023-02-20 19:32:53.9600 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:33:04.1936 Info Shutdown() called. Logger closing...
+2023-02-20 19:33:04.1936 Info Closing old configuration.
+2023-02-20 19:33:04.2066 Info Logger has been closed down.
+2023-02-20 19:40:34.6513 Info Message Template Auto Format enabled
+2023-02-20 19:40:34.7363 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:40:34.9483 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:40:35.0153 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:40:35.0823 Info Configuration initialized.
+2023-02-20 19:40:35.3243 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:40:35.3243 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:40:35.4154 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:40:35.4154 Info Message Template Auto Format enabled
+2023-02-20 19:40:35.4304 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:40:35.4634 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:40:35.4634 Info Closing old configuration.
+2023-02-20 19:40:35.5374 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:40:45.5319 Info Shutdown() called. Logger closing...
+2023-02-20 19:40:45.5319 Info Closing old configuration.
+2023-02-20 19:40:45.5319 Info Logger has been closed down.
+2023-02-20 19:45:35.0194 Info Message Template Auto Format enabled
+2023-02-20 19:45:35.0764 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:45:35.2174 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:45:35.2834 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:45:35.3264 Info Configuration initialized.
+2023-02-20 19:45:35.3624 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:45:35.3624 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:45:35.4845 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:45:35.4845 Info Message Template Auto Format enabled
+2023-02-20 19:45:35.4845 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:45:35.4915 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:45:35.4915 Info Closing old configuration.
+2023-02-20 19:45:35.5415 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:45:41.9788 Info Shutdown() called. Logger closing...
+2023-02-20 19:45:41.9838 Info Closing old configuration.
+2023-02-20 19:45:42.0008 Info Logger has been closed down.
+2023-02-20 19:54:53.6901 Info Message Template Auto Format enabled
+2023-02-20 19:54:53.8101 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:54:54.0071 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:54:54.0811 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:54:54.1901 Info Configuration initialized.
+2023-02-20 19:54:54.2611 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 19:54:54.2611 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 19:54:54.3631 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:54:54.3651 Info Message Template Auto Format enabled
+2023-02-20 19:54:54.3651 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 19:54:54.3651 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 19:54:54.3651 Info Closing old configuration.
+2023-02-20 19:54:54.4281 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 19:55:04.7447 Info Shutdown() called. Logger closing...
+2023-02-20 19:55:04.7447 Info Closing old configuration.
+2023-02-20 19:55:04.7577 Info Logger has been closed down.
+2023-02-20 20:06:15.4890 Info Message Template Auto Format enabled
+2023-02-20 20:06:15.5780 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:06:15.7280 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:06:15.7980 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:06:15.8350 Info Configuration initialized.
+2023-02-20 20:06:15.9680 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 20:06:15.9680 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:06:16.0821 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:06:16.0981 Info Message Template Auto Format enabled
+2023-02-20 20:06:16.0981 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:06:16.1061 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:06:16.1061 Info Closing old configuration.
+2023-02-20 20:06:16.1591 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:06:23.1485 Info Shutdown() called. Logger closing...
+2023-02-20 20:06:23.1485 Info Closing old configuration.
+2023-02-20 20:06:23.1625 Info Logger has been closed down.
+2023-02-20 20:11:18.5669 Info Message Template Auto Format enabled
+2023-02-20 20:11:18.6169 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:11:18.7699 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:11:18.8259 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:11:18.8699 Info Configuration initialized.
+2023-02-20 20:11:18.9029 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 20:11:18.9029 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:11:19.0139 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:11:19.0139 Info Message Template Auto Format enabled
+2023-02-20 20:11:19.0139 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:11:19.0139 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:11:19.0139 Info Closing old configuration.
+2023-02-20 20:11:19.0729 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:11:26.5644 Info Shutdown() called. Logger closing...
+2023-02-20 20:11:26.5644 Info Closing old configuration.
+2023-02-20 20:11:26.5644 Info Logger has been closed down.
+2023-02-20 20:27:21.9176 Info Message Template Auto Format enabled
+2023-02-20 20:27:22.0266 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:27:22.2516 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:27:22.3226 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:27:22.3696 Info Configuration initialized.
+2023-02-20 20:27:22.4976 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 20:27:22.4976 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:27:22.6516 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:27:22.6516 Info Message Template Auto Format enabled
+2023-02-20 20:27:22.6516 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:27:22.6516 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:27:22.6516 Info Closing old configuration.
+2023-02-20 20:27:22.7476 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:27:31.8161 Info Shutdown() called. Logger closing...
+2023-02-20 20:27:31.8161 Info Closing old configuration.
+2023-02-20 20:27:31.8341 Info Logger has been closed down.
+2023-02-20 20:32:05.1849 Info Message Template Auto Format enabled
+2023-02-20 20:32:05.2259 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:32:05.3579 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:32:05.4259 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:32:05.4729 Info Configuration initialized.
+2023-02-20 20:32:05.5459 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 20:32:05.5609 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:32:05.6409 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:32:05.6409 Info Message Template Auto Format enabled
+2023-02-20 20:32:05.6409 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:32:05.6409 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:32:05.6479 Info Closing old configuration.
+2023-02-20 20:32:05.7239 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:34:20.9992 Info Message Template Auto Format enabled
+2023-02-20 20:34:21.1022 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:34:21.2662 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:34:21.3232 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:34:21.3622 Info Configuration initialized.
+2023-02-20 20:34:21.3812 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 20:34:21.3812 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:34:21.4572 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:34:21.4622 Info Message Template Auto Format enabled
+2023-02-20 20:34:21.4622 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:34:21.4622 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:34:21.4622 Info Closing old configuration.
+2023-02-20 20:34:21.5732 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:34:28.0666 Info Shutdown() called. Logger closing...
+2023-02-20 20:34:28.0666 Info Closing old configuration.
+2023-02-20 20:34:28.0886 Info Logger has been closed down.
+2023-02-20 20:48:02.9882 Info Message Template Auto Format enabled
+2023-02-20 20:48:03.0502 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:48:03.2042 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:48:03.2702 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:48:03.3182 Info Configuration initialized.
+2023-02-20 20:48:03.3702 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 20:48:03.3702 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 20:48:03.4492 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:48:03.4492 Info Message Template Auto Format enabled
+2023-02-20 20:48:03.4492 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 20:48:03.4492 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 20:48:03.4492 Info Closing old configuration.
+2023-02-20 20:48:03.5022 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 20:48:14.8699 Info Shutdown() called. Logger closing...
+2023-02-20 20:48:14.8699 Info Closing old configuration.
+2023-02-20 20:48:14.8849 Info Logger has been closed down.
+2023-02-20 21:00:44.1786 Info Message Template Auto Format enabled
+2023-02-20 21:00:44.2436 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 21:00:44.3886 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 21:00:44.4506 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 21:00:44.4906 Info Configuration initialized.
+2023-02-20 21:00:44.5136 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-02-20 21:00:44.5136 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\NLog.config
+2023-02-20 21:00:44.6126 Info Loading NLog config from XML file: C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:00:44.6126 Info Message Template Auto Format enabled
+2023-02-20 21:00:44.6126 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 21:00:44.6126 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 21:00:44.6126 Info Closing old configuration.
+2023-02-20 21:00:44.6676 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:00:54.0482 Info Shutdown() called. Logger closing...
+2023-02-20 21:00:54.0482 Info Closing old configuration.
+2023-02-20 21:00:54.0682 Info Logger has been closed down.
+2023-02-20 21:20:31.2797 Info Message Template Auto Format enabled
+2023-02-20 21:20:31.3468 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 21:20:31.7288 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 21:20:32.2208 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:20:35.0640 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:20:41.0213 Info Shutdown() called. Logger closing...
+2023-02-20 21:20:41.0213 Info Closing old configuration.
+2023-02-20 21:20:41.0713 Info Logger has been closed down.
+2023-02-20 21:24:43.9480 Info Message Template Auto Format enabled
+2023-02-20 21:24:44.0890 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 21:24:44.2841 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 21:24:44.4821 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:24:47.3652 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:30:35.4158 Info Message Template Auto Format enabled
+2023-02-20 21:30:35.4758 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 21:30:35.6258 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 21:30:35.7188 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:30:37.7469 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:38:45.1692 Info Message Template Auto Format enabled
+2023-02-20 21:38:45.2160 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 21:38:45.3564 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 21:38:45.4812 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:38:47.4074 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:41:54.8890 Info Message Template Auto Format enabled
+2023-02-20 21:41:55.1660 Info Loading assembly: NLog.Web.AspNetCore
+2023-02-20 21:41:55.3531 Info Registered target NLog.Targets.FileTarget(Name=errors)
+2023-02-20 21:41:55.4581 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config
+2023-02-20 21:41:57.6152 Info Validating config: TargetNames=errors, ConfigItems=16, FilePath=C:\MyApps\NatterLite\bin\Debug\net5.0\nlog.config

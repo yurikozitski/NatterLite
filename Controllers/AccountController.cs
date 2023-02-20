@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Drawing.Imaging;
 using System.Drawing;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using NatterLite.Filters;
 
@@ -19,6 +20,7 @@ namespace NatterLite.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly ILogger logger;
         private readonly IConfiguration configuration;
         private readonly IPicturesProvider picturesProvider;
         private readonly ICountryList countriesProvider;
@@ -29,6 +31,7 @@ namespace NatterLite.Controllers
         private readonly SignInManager<User> signInManager;
         private readonly RoleManager<IdentityRole> roleManager;
         public AccountController(
+            ILogger<AccountController> _logger,
             IConfiguration _configuration,
             IPicturesProvider _picturesProvider,
             ICountryList _countriesProvider,
@@ -39,6 +42,7 @@ namespace NatterLite.Controllers
             SignInManager<User> _signInManager,
             RoleManager<IdentityRole> _manager)
         {
+            logger = _logger;
             configuration = _configuration;
             picturesProvider = _picturesProvider;
             countriesProvider = _countriesProvider;
@@ -84,8 +88,9 @@ namespace NatterLite.Controllers
                             HttpContext.Response.Cookies.Append("userPicturePath", $"{user.UserName}.jpg");
                             HttpContext.Response.Cookies.Append("userName", $"{user.FullName}");
                         }
-                        catch 
+                        catch(Exception ex) 
                         {
+                            logger.LogError(ex, "Can't create an user's profile pictire at SignedUsersPics");
                             return RedirectToAction("Error", "Home");
                         }
 
@@ -160,9 +165,10 @@ namespace NatterLite.Controllers
                     {
                         user.ProfilePicture = picturesProvider.GetDefaultPicture(configuration["PicturesPaths:DefaultProfilePicturePath"]);
                     }
-                    catch(FileNotFoundException fe)
+                    catch(Exception ex)
                     {
-                        return Content($"{fe.Message}");
+                        logger.LogError(ex, "Can't read default profile picture");
+                        return Content($"{ex.Message}");
                     }
                     
                 }
@@ -189,9 +195,10 @@ namespace NatterLite.Controllers
                     {
                         user.BackgroundPicture = picturesProvider.GetDefaultPicture(configuration["PicturesPaths:DefaultBackgroundPicturePath"]);
                     }
-                    catch (FileNotFoundException fe)
+                    catch (Exception ex)
                     {
-                        return Content($"{fe.Message}");
+                        logger.LogError(ex, "Can't read default background picture");
+                        return Content($"{ex.Message}");
                     }
 
                 }
@@ -210,8 +217,9 @@ namespace NatterLite.Controllers
                         HttpContext.Response.Cookies.Append("userPicturePath", $"{user.UserName}.jpg");
                         HttpContext.Response.Cookies.Append("userName", $"{user.FullName}");
                     }
-                    catch
+                    catch (Exception ex)
                     {
+                        logger.LogError(ex, "Can't create an user's profile pictire at SignedUsersPics");
                         return RedirectToAction("Error", "Home");
                     }
 

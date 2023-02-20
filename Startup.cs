@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using NatterLite.Filters;
+using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 
 namespace NatterLite
 {
@@ -33,6 +35,12 @@ namespace NatterLite
         {
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddLogging(logging =>
+            //{
+            //    logging.ClearProviders();
+            //    logging.SetMinimumLevel(LogLevel.Error);
+            //    logging.AddNLog();
+            //});
 
             services.AddIdentity<User, IdentityRole>(opts =>
             {
