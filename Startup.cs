@@ -35,12 +35,6 @@ namespace NatterLite
         {
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddLogging(logging =>
-            //{
-            //    logging.ClearProviders();
-            //    logging.SetMinimumLevel(LogLevel.Error);
-            //    logging.AddNLog();
-            //});
 
             services.AddIdentity<User, IdentityRole>(opts =>
             {
