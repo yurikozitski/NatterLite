@@ -16,8 +16,8 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using NatterLite.Filters;
-using Microsoft.Extensions.Logging;
-using NLog.Extensions.Logging;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
 
 namespace NatterLite
 {
@@ -50,6 +50,14 @@ namespace NatterLite
             {
                 options.AccessDeniedPath = new PathString("/Account/Login");
             });
+
+            services.AddResponseCompression();
+
+            services.Configure<BrotliCompressionProviderOptions>(options =>
+            {
+                options.Level = CompressionLevel.Optimal;
+            });
+
             services.AddSingleton<IPicturesProvider,DefaultUserPicturesProvider>();
             services.AddSingleton<ICountryList, GetCountryList>();
             services.AddSingleton<IImageValidator, ImageValidator>();
@@ -70,6 +78,7 @@ namespace NatterLite
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseResponseCompression();
             app.UseStaticFiles();
 
             app.UseRouting();
