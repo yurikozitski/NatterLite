@@ -80,7 +80,7 @@ namespace NatterLite.Controllers
                     {
                         try
                         {
-                            string userPicturePath = @$"C:\MyApps\NatterLite\wwwroot\SignedUsersPics\{user.UserName}.jpg";
+                            string userPicturePath = @$"{Directory.GetCurrentDirectory()}\wwwroot\SignedUsersPics\{user.UserName}.jpg";
                             using (Image image = Image.FromStream(new MemoryStream(user.ProfilePicture)))
                             {
                                 image.Save(userPicturePath, ImageFormat.Jpeg);
@@ -209,7 +209,7 @@ namespace NatterLite.Controllers
                     await userManager.AddToRoleAsync(user, "user");
                     try
                     {
-                        string userPicturePath = @$"C:\MyApps\NatterLite\wwwroot\SignedUsersPics\{user.UserName}.jpg";
+                        string userPicturePath = @$"{Directory.GetCurrentDirectory()}\wwwroot\SignedUsersPics\{user.UserName}.jpg";
                         using (Image image = Image.FromStream(new MemoryStream(user.ProfilePicture)))
                         {
                             image.Save(userPicturePath, ImageFormat.Jpeg);
@@ -246,15 +246,17 @@ namespace NatterLite.Controllers
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
-            if (!User.Identity.IsAuthenticated) return RedirectToAction("Login", "Account");
+            if (!User.Identity.IsAuthenticated) 
+                return RedirectToAction("Login", "Account");
 
             await signInManager.SignOutAsync();
 
-            if (cache.TryGetValue(User.Identity.Name, out User user)) cache.Remove(User.Identity.Name);
+            if (cache.TryGetValue(User.Identity.Name, out User user)) 
+                cache.Remove(User.Identity.Name);
 
-            if (System.IO.File.Exists(@$"C:\MyApps\NatterLite\wwwroot\SignedUsersPics\{User.Identity.Name}.jpg"))
+            if (System.IO.File.Exists(@$"{Directory.GetCurrentDirectory()}\wwwroot\SignedUsersPics\{User.Identity.Name}.jpg"))
             {
-                System.IO.File.Delete(@$"C:\MyApps\NatterLite\wwwroot\SignedUsersPics\{User.Identity.Name}.jpg");
+                System.IO.File.Delete(@$"{Directory.GetCurrentDirectory()}\wwwroot\SignedUsersPics\{User.Identity.Name}.jpg");
             }
             return RedirectToAction("Login", "Account");
         }

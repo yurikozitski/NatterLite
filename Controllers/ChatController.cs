@@ -17,12 +17,14 @@ namespace NatterLite.Controllers
     {
         private readonly ApplicationContext db;
         private readonly UserManager<User> userManager;
+
         public ChatController(ApplicationContext context,
             UserManager<User> _userManager)
         {
             db = context;
             userManager = _userManager;
         }
+
         [HttpPost]
         public async Task<IActionResult> SendMessage(string userId)
         {
@@ -53,22 +55,22 @@ namespace NatterLite.Controllers
             await db.SaveChangesAsync();
             return RedirectToAction("ChatMenu", "Chat");
         }
+
         [HttpGet]
         public IActionResult ChatMenu()
         {          
             return View("ChatMenu");
         }
+
         [HttpPost]
         public async Task<IActionResult> GetChats(string currentchatId = null)
         {
-            var currentUser = await db.Users.Include(u=>u.Chats)
-                .ThenInclude(c=>c.Users)
-                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
-            var currentUserWithChatMessages = await db.Users.Include(u => u.Chats)
-                .ThenInclude(c => c.Messages)
-                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
-            var currentUserWithblacklist = await db.Users.Include(u => u.BlackList)
-                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+            var currentUser =  await db.Users
+                .Include(u => u.BlackList)
+                    .Include("Chats.Users") 
+                        .Include("Chats.Messages")
+                            .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+
             List<Chat> currentUserChats = new List<Chat>();
             currentUserChats= currentUser.Chats;
             List<ChatViewModel> chatViewModelList=new List<ChatViewModel>();
@@ -147,10 +149,12 @@ namespace NatterLite.Controllers
             }
             return PartialView("ChatListPartial", chatViewModelList);
         }
+
         [HttpPost]
         public async Task<IActionResult> WriteLastVisitedTimeForChat(string chatId)
         {
             Chat chat = await db.Chats.FirstOrDefaultAsync(c=>c.Id.ToString()==chatId);
+
             if (chat.LastVisitedBy != null)
             {
                 char[] separators = new char[] { ',', '=' };
@@ -186,14 +190,18 @@ namespace NatterLite.Controllers
             await db.SaveChangesAsync();
             return new EmptyResult();
         }
-            [HttpPost]
+
+        [HttpPost]
         public async Task<IActionResult> GetMessages(string chatId)
         {
-            Chat chatWithMessages = await db.Chats.Include(c => c.Messages).FirstOrDefaultAsync(c => c.Id.ToString() == chatId);
-            Chat chatWithUsers = await db.Chats.Include(c => c.Users).ThenInclude(u => u.BlackList).FirstOrDefaultAsync(c => c.Id.ToString() == chatId);
+            Chat chat = await db.Chats
+                .Include(c => c.Messages)
+                    .Include(c => c.Users)
+                        .ThenInclude(u => u.BlackList)
+                            .FirstOrDefaultAsync(c => c.Id.ToString() == chatId);
 
-            User currentUser = chatWithUsers.Users.Find(u => u.UserName == User.Identity.Name);
-            User companionUser = chatWithUsers.Users.Find(u => u.UserName != User.Identity.Name);
+            User currentUser = chat.Users.Find(u => u.UserName == User.Identity.Name);
+            User companionUser = chat.Users.Find(u => u.UserName != User.Identity.Name);
 
             MessagesViewModel mvm = new MessagesViewModel();
             mvm.CompanionUserIdentityName = companionUser.UserName;
@@ -201,12 +209,14 @@ namespace NatterLite.Controllers
             mvm.CompanionUserProfilePicture = companionUser.ProfilePicture;
             mvm.CompanionUserStatus = companionUser.Status;
 
-            if (currentUser.BlackList.Exists(u => u.UserName == companionUser.UserName)) mvm.DidCurrentUserAddedCompanionUserToBlackList = true;
-            if (companionUser.BlackList.Exists(u => u.UserName == currentUser.UserName)) mvm.DidCompanionUserAddedCurrentUserToBlackList = true;
+            if (currentUser.BlackList.Exists(u => u.UserName == companionUser.UserName)) 
+                mvm.DidCurrentUserAddedCompanionUserToBlackList = true;
+            if (companionUser.BlackList.Exists(u => u.UserName == currentUser.UserName)) 
+                mvm.DidCompanionUserAddedCurrentUserToBlackList = true;
 
-            if (chatWithMessages.Messages.Count != 0)
+            if (chat.Messages.Count != 0)
             {
-                foreach(Message mes in chatWithMessages.Messages)
+                foreach(Message mes in chat.Messages)
                 {
                     mvm.Messages.Add(mes);
                 }

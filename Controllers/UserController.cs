@@ -187,7 +187,8 @@ namespace NatterLite.Controllers
         public async Task<IActionResult> AddToBlackList(string CompanionUniqueName)
         {
             User userToBlacklist = await userManager.FindByNameAsync(CompanionUniqueName);
-            User currentUser = await db.Users.Include(u => u.BlackList).FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+            User currentUser = await db.Users.Include(u => u.BlackList)
+                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
 
             if (currentUser.BlackList.Exists(u => u.UserName == CompanionUniqueName))
             {
@@ -204,7 +205,8 @@ namespace NatterLite.Controllers
         [HttpGet]
         public async Task<IActionResult> SeeBlackList()
         {
-            User currentUser = await db.Users.Include(u => u.BlackList).FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+            User currentUser = await db.Users.Include(u => u.BlackList)
+                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
 
             List<UserBlackListViewModel> ublvmList = new List<UserBlackListViewModel>();
             if (currentUser.BlackList.Count!=0)
@@ -225,7 +227,8 @@ namespace NatterLite.Controllers
         [HttpPut]
         public async Task<IActionResult> RemoveFromBlackList(string userName)
         {
-            User currentUser = await db.Users.Include(u => u.BlackList).FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+            User currentUser = await db.Users.Include(u => u.BlackList)
+                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
             User userToRemove = currentUser.BlackList.Find(u => u.UserName == userName);
             currentUser.BlackList.Remove(userToRemove);
             await db.SaveChangesAsync();

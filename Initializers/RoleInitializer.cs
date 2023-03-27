@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using NatterLite.Models;
 using NatterLite.Services;
+using System.IO;
 
 namespace NatterLite.Initializers
 {
@@ -22,8 +23,12 @@ namespace NatterLite.Initializers
             string lastName = "Admin";
             string fullName = firstName + " " + lastName;
             string country = "Ukraine";
-            byte[] profilePicture = _picturesProvider.GetDefaultPicture("C:\\MyApps\\NatterLite\\wwwroot\\Images\\DefaultUsersPictures\\admin.jpg");
-            byte[] backgroundPicture = _picturesProvider.GetDefaultPicture("C:\\MyApps\\NatterLite\\wwwroot\\Images\\DefaultUsersPictures\\DefaultBackgroundPicture.jpg");
+
+            byte[] profilePicture = _picturesProvider
+                .GetDefaultPicture(@$"{Directory.GetCurrentDirectory()}\wwwroot\Images\DefaultUsersPictures\admin.jpg");
+            byte[] backgroundPicture = _picturesProvider
+                .GetDefaultPicture(@$"{Directory.GetCurrentDirectory()}\wwwroot\Images\DefaultUsersPictures\DefaultBackgroundPicture.jpg");
+
             DateTime dateOfBirth = new DateTime(1991,04,21);
             if (await roleManager.FindByNameAsync("admin") == null)
             {
